@@ -1,0 +1,15 @@
+# Environments and private/raw data
+.venv/
+venv/
+data/
+__pycache__/
+*.pyc
+*.nbc
+*.nbi
+.env
+.env.*
+*.npz
+*.npy
+*.zip
+results/my_*/
+results/new_*/

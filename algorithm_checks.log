@@ -1,0 +1,10 @@
+test_ctds (__main__.Checks.test_ctds) ... ok
+test_distances (__main__.Checks.test_distances) ... ok
+test_hierarchy_partition (__main__.Checks.test_hierarchy_partition) ... ok
+test_sampling_grid (__main__.Checks.test_sampling_grid) ... ok
+test_timestamp_sensitivity (__main__.Checks.test_timestamp_sensitivity) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.139s
+
+OK
