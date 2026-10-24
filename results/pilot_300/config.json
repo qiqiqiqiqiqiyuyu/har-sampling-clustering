@@ -1,0 +1,44 @@
+{
+  "data_dir": "<DATA_DIR>",
+  "output": "results/pilot_300",
+  "per_class": 50,
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "channel": "total_acc_x",
+  "clusters": 6,
+  "psi": 128,
+  "repetitions": 50,
+  "twed_nu": 0.1,
+  "twed_penalty": 0.01,
+  "dataset_root": "<UCI_HAR_ROOT>",
+  "python": "3.12.14",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "sklearn": "1.5.2",
+  "raw_samples": 10299,
+  "input_sha256": {
+    "train/Inertial Signals/total_acc_x_train.txt": "41a7fe1da7b529cc6c2c3d7df97c98752bea74d7a142673dd59c7820fad3b5e6",
+    "train/y_train.txt": "415b3357e2e2d5e70a45c781947c6bdd80e0410a579d862eedcd6bbce3c694ef",
+    "train/subject_train.txt": "66e1e2fbe9b396fa5155f531dc3348c803f503be663e2318772d49947db9153a",
+    "test/Inertial Signals/total_acc_x_test.txt": "ea71c339c828561bc1dc6f7301a54aeb7e61e6312cb2387ebaea832ffd04203d",
+    "test/y_test.txt": "2a94cb53ca46b956c1b2aebd4a09a72badd8a8e9ea9cdfe9f31b3306a08666bb",
+    "test/subject_test.txt": "63b8c577f4a85431c06bd87f6384608c90a9f72f05c7956dd21255dc63515c07"
+  },
+  "nominal_window_seconds": 2.56,
+  "original_rate_hz": 50,
+  "lowpass_hz": 5,
+  "lowpass_order": 6,
+  "resampling": "scipy.signal.resample_poly padtype=line",
+  "normalization": "none before distances; per-window z-score within CTDS",
+  "source_hashes": {
+    "check_algorithms.py": "5151c36133bf3424d4e2bcf444daabce70c07a0f90022484e85dfa2c8585db65",
+    "ctds.py": "d5aa3cea3dfa3c97176271fa6fbb2384c202d1215322ea35a67d0238dee24bea",
+    "distances.py": "110630dbd2ff575591444c8d6d6d382b55c37a38fd9da7df51d1a2d6e279fd53",
+    "make_report.py": "2417a0de76cc1ba9c00b3fd9348cf4c65f147ecc13f62fd9b39a6f8a6d8cda14",
+    "run_experiment.py": "a5b5580f1e8a698c4782a19545968ec4dae1d58570b7aede994bb99bac164da1"
+  },
+  "sharing_note": "Local absolute paths removed. source_hashes refer to original executed files; sharing-only path defaults and docs may differ. Raw arrays and distance matrices are not distributed."
+}

@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "metric_rows": 60,
+  "assignment_rows": 18000,
+  "metric_recomputed": true,
+  "sampling_grids_checked": true,
+  "distance_matrices_checked": true,
+  "same_grid_dtw_equality_checked": true
+}
