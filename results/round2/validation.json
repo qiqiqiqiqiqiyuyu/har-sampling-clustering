@@ -1,0 +1,9 @@
+{
+  "complete": true,
+  "runs": 165,
+  "assignment_rows": 49500,
+  "baseline_checks": 33,
+  "all_baselines_reproduced": true,
+  "source_assignments_unchanged": true,
+  "independent_holdout": false
+}

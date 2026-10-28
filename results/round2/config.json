@@ -1,0 +1,68 @@
+{
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "source_results": "<LOCAL_PATH>",
+  "input_sha256": {
+    "train/Inertial Signals/total_acc_x_train.txt": "41a7fe1da7b529cc6c2c3d7df97c98752bea74d7a142673dd59c7820fad3b5e6",
+    "train/y_train.txt": "415b3357e2e2d5e70a45c781947c6bdd80e0410a579d862eedcd6bbce3c694ef",
+    "train/subject_train.txt": "66e1e2fbe9b396fa5155f531dc3348c803f503be663e2318772d49947db9153a",
+    "test/Inertial Signals/total_acc_x_test.txt": "ea71c339c828561bc1dc6f7301a54aeb7e61e6312cb2387ebaea832ffd04203d",
+    "test/y_test.txt": "2a94cb53ca46b956c1b2aebd4a09a72badd8a8e9ea9cdfe9f31b3306a08666bb",
+    "test/subject_test.txt": "63b8c577f4a85431c06bd87f6384608c90a9f72f05c7956dd21255dc63515c07"
+  },
+  "source_assignment_sha256": "1c3f7a5e490b3ff24edf9f72bf7c1397cc30e2a2caefd718021279868eb292e5",
+  "psi": 128,
+  "repetitions": 50,
+  "preprocessing_modes": [
+    "raw",
+    "center",
+    "zscore"
+  ],
+  "std_floor": 1e-08,
+  "fusion_weights": [
+    0.25,
+    0.5,
+    1.0
+  ],
+  "fusion": "L2-normalized CTDS + weight * L2-normalized standardized stats",
+  "statistics": [
+    "mean",
+    "std_population",
+    "rms",
+    "peak_to_peak"
+  ],
+  "n_init": 10,
+  "clusters": 6,
+  "selection": "All predeclared configurations evaluated; labels used for development diagnostics only",
+  "twed_grid": [
+    [
+      0.1,
+      0.01
+    ],
+    [
+      0.01,
+      0.01
+    ],
+    [
+      1.0,
+      0.01
+    ],
+    [
+      0.1,
+      0.0
+    ],
+    [
+      0.1,
+      0.1
+    ]
+  ],
+  "source_hashes": {
+    "run_round2.py": "e05fbd2aee385ef965524733f319855d8e4f079e286f006aed1f7c28df1b8ac0",
+    "ctds.py": "d5aa3cea3dfa3c97176271fa6fbb2384c202d1215322ea35a67d0238dee24bea",
+    "distances.py": "110630dbd2ff575591444c8d6d6d382b55c37a38fd9da7df51d1a2d6e279fd53",
+    "diagnose_round1.py": "367b5b5d68c85bb34a88bd828dbe232e8b330da1fbaf79d7c9380a3e70dbb97d"
+  }
+}

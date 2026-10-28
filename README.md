@@ -2,6 +2,31 @@
 
 UCI HAR 时间序列采样频率聚类初步实验。比较原频率 DTW、统一采样后的 DTW、带时间戳 TWED，以及统一采样后的 CTDS 适配版本。
 
+## 新增：第一轮诊断与第二轮实验
+
+第二轮已完成165次聚类，沿用第一轮的三个种子和样本。所有结果为开发集诊断，尚未完成独立受试者验证。
+
+- [第二轮结论与证据位置](results/round2/CONCLUSIONS.md)
+- [第二轮完整结果](results/round2/REPORT.md)、[汇总指标](results/round2/summary.csv)、[逐样本预测](results/round2/assignments.csv)
+- [第二轮实验设置](ROUND2_EXPERIMENT.md)、[运行代码](run_round2.py)、[独立校验代码](validate_round2.py)
+- [第二轮独立校验记录](results/round2/independent_validation.json)：165组指标及计数表、60个距离矩阵、33项基线复现通过检查。
+- [第一轮诊断说明](ROUND1_DIAGNOSTICS.md)、[诊断报告](diagnostics/round1/DIAGNOSTIC_REPORT.md)、[诊断代码](diagnose_round1.py)
+
+低通50Hz条件下，原CTDS平均ARI为0.2668；仅统计特征为0.5162；CTDS与统计特征融合、统计块权重1时为0.5815。TWED固定nu=0.1，将删除惩罚从0.01改为0.1，平均ARI从0.0146提高到0.4658。融合后坐着与站着仍明显混淆，详细限制见结论文件。
+
+![第二轮低通50Hz对比](results/round2/filtered50_comparison.png)
+
+每个 `results/round2/seed_*/条件/方法/` 目录含类别×簇计数、行百分比、热力图及簇大小图。簇编号没有活动类别含义。
+
+复现示例（先安装原有requirements.txt依赖，自行下载UCI HAR）：
+
+```powershell
+python run_round2.py --data-dir "D:/cluster/data" --output results/new_round2
+python validate_round2.py --output results/new_round2
+```
+
+数据路径可按实际位置修改。已发布的 `results/round2` 非空，请使用新输出目录。原始数据、重采样数组、距离矩阵和虚拟环境不上传；完整校验脚本需对重新运行生成的完整输出执行。HTML总览请下载后在浏览器打开。公开JSON中的本机路径已替换为占位符，原始输入和运行代码哈希保留。
+
 本项目包含已运行的 **4组方法 × 5种采样条件 × 3个种子 = 60组评估**。每次从六类活动各抽50条，共300条，使用 `total_acc_x` 单通道。真实标签仅用于平衡抽样和评价，不参与表示/距离构造，不按标签搜索参数。
 
 ## 查看结果

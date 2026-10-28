@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "groups": 60,
+  "assignments": 18000,
+  "class_count_total": 18000,
+  "signal_stat_rows": 9000,
+  "class_cluster_plots": 60,
+  "cluster_size_plots": 60,
+  "signal_example_plots": 30,
+  "source_assignments_unchanged": true,
+  "source_config_unchanged": true,
+  "source_samples_unchanged": true,
+  "activity_and_subject_provenance_checked": true,
+  "original_data_hashes_checked": true,
+  "rates_and_objects_equal_across_methods": true,
+  "clustering_rerun": false
+}

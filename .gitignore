@@ -13,3 +13,5 @@ __pycache__/
 *.zip
 results/my_*/
 results/new_*/
+.idea/
+round2_run.log

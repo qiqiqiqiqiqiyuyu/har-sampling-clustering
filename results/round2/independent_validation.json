@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "metrics_recomputed": 165,
+  "contingency_tables_checked": 165,
+  "distance_matrices_checked": 60,
+  "baseline_reproductions_checked": 33,
+  "source_assignments_unchanged": true,
+  "sample_objects_and_rates_unchanged": true,
+  "summaries_and_stability_recomputed": true
+}
